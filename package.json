@@ -1,0 +1,27 @@
+{
+  "name": "Yangliuly1-blog-hugo",
+  "version": "1.0.0",
+  "description": "Yangliuly1's Note - A front-end technical blog.",
+  "scripts": {
+    "algolia": "atomic-algolia",
+    "build": "hugo -v --gc --minify",
+    "server": "hugo server -D --disableFastRender --navigateToChanged",
+    "server:production": "npm run server -- --environment production",
+    "update:theme": "git submodule update --remote --merge themes/FixIt && git add . && git commit -m ':arrow_up: Chore(theme): update FixIt version'",
+    "qcloudcdn": "node .scripts/qcloudcdn.js $SECRET_ID $SECRET_KEY"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yangliuly1/hugo-blog.git"
+  },
+  "author": "Yangliuly1 (https://github.com/Yangliuly1)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Yangliuly1/hugo-blog/issues"
+  },
+  "homepage": "https://github.com/Yangliuly1/hugo-blog#readme",
+  "dependencies": {
+    "atomic-algolia": "^0.3.19",
+    "qcloud-cdn-node-sdk": "^1.0.0"
+  }
+}
