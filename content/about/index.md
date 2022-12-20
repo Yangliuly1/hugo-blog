@@ -25,20 +25,18 @@ private:
 Blog::Blog():m_author(""), m_url(""){}
 Blog::Blog(std::string author, std::string url):m_author(author), m_url(url){}
 Blog::~Blog(){}
-
 void Blog::PrintInfo(){
     printf("Blog info: %s, %s", m_author.c_str(), m_url.c_str());
 }
 
-int main(int argc, char const *argv[])
-{
-    Blog* blog = new Blog("Yangliul1", "https://yangliuly1.github.io/");
-    if(blog == nullptr){  // 初始化失败
+int main(int argc, char const *argv[]){
+    Blog *pBlog = new Blog("Yangliul1", "https://yangliuly1.github.io/");
+    if(pBlog == nullptr){  // 初始化失败
         printf("%s, New Blog failed!", __FUNCTION__);
         return -1;
     }
-    blog->PrintInfo();
-    delete blog;
+    pBlog->PrintInfo();
+    delete pBlog;
     return 0;
 }
 
@@ -95,7 +93,7 @@ int main(int argc, char const *argv[])
 
 ## 订阅
 
-- [RSS](https://yangliuly1.github.io//index.xml)
+- [RSS](https://yangliuly1.github.io/index.xml)
 - [GitHub](https://github.com/Yangliuly1/hugo-blog)
 
 
